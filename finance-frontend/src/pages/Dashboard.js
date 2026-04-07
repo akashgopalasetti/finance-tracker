@@ -8,8 +8,8 @@ function Dashboard() {
   const [summary, setSummary] = useState({});
   const [records, setRecords] = useState([]);
 
-  const user = JSON.parse(localStorage.getItem("user"));
-  const role = user?.role || "viewer";
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
+const role = user?.role || "viewer";
 
   useEffect(() => {
     fetchSummary();
