@@ -5,7 +5,14 @@ const app = express();
 
 const cors = require("cors");
 
-app.use(cors({ origin: "*" }));
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://finance-tracker-3ijh.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
