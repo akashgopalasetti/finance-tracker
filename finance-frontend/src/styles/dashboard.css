@@ -1,0 +1,27 @@
+.dashboard {
+  padding: 20px;
+}
+
+
+.record-item {
+
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-item span {
+  font-weight: bold;
+}
+p{
+    color: rgb(95, 149, 197);
+}
+.box p,b {
+    color: aliceblue;
+}
+.box h3 {
+    color: aliceblue;
+}
