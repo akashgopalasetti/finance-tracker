@@ -3,7 +3,13 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+const cors = require("cors");
+
+app.use(cors({
+  origin: "https://finance-tracker-21-kamz.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 // Routes
