@@ -4,15 +4,21 @@ const express = require("express");
 const app = express();
 
 const cors = require("cors");
+const cors = require("cors");
 
+// ✅ MUST be before routes
 app.use(cors({
   origin: [
     "http://localhost:3000",
     "https://finance-tracker-3ijh.vercel.app"
   ],
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
+
+// ✅ HANDLE PREFLIGHT (IMPORTANT)
+app.options("*", cors());
 app.use(express.json());
 
 // Routes
