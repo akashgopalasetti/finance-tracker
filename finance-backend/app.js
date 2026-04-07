@@ -15,8 +15,6 @@ app.use(cors({
   credentials: true
 }));
 
-// ✅ HANDLE PREFLIGHT (IMPORTANT)
-app.options("*", cors());
 app.use(express.json());
 
 // Routes
